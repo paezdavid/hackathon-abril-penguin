@@ -2,6 +2,10 @@ from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
+from typing import Union
+from fastapi import FastAPI
+
+app = FastAPI()
 
 # Create the engine
 engine = create_engine('sqlite:///penitenciarias.db', echo=True)
@@ -32,8 +36,20 @@ session = Session()
 
 penitenciarias = session.query(Penitenciarias).all()
 session.close()
-for penitenciaria in penitenciarias:
-    print(penitenciaria.nombre)
+
+    # print(penitenciarias)
+@app.get("/penitenciarias")
+def ver_penitenciarias():
+    
+    return {'penitenciarias': penitenciarias}
 
 
-# print(penitenciarias)
+@app.get("/penitenciarias/{item_id}")
+def read_item(item_id: int):
+    for penitenciaria in penitenciarias:
+        if penitenciaria.id == item_id:
+
+            return {
+                "nombre": penitenciaria.nombre
+            }
+    
