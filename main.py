@@ -50,6 +50,16 @@ def read_item(item_id: int):
         if penitenciaria.id == item_id:
 
             return {
-                "nombre": penitenciaria.nombre
+                "id": penitenciaria.id,
+                "direccion": penitenciaria.direccion,
+                "cant_funcionarios": penitenciaria.cant_funcionarios,
+                "capacidad": penitenciaria.capacidad,
+                "pais": penitenciaria.pais,
+                "cant_pabellones": penitenciaria.cant_pabellones,
+                "nombre": penitenciaria.nombre,
+                "cant_reclusos": penitenciaria.cant_reclusos,
+                "cant_celdas": penitenciaria.cant_celdas,
+                "ciudad": penitenciaria.ciudad,
+                "cant_camas": penitenciaria.cant_camas
             }
     
