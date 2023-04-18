@@ -18,5 +18,9 @@ def prueba():
     json_final= requests.get(url= 'http://127.0.0.1:8000/penitenciarias').json()
     return render_template('prueba.html', json_final=json_final)
 
+@app.route('/documentacion')
+def documentacion():
+    return render_template('documentacion.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

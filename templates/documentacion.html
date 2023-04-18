@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script> src = "https://cdn.tailwindcss.com/"</script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+    </style>
+    <meta charset="UTF-8">
+    <title>Documentación de la API</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/dracula.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js%22%3E"> </script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body class="bg-[#2E4066]">
+    <header>
+        <!--logo-nombre-->
+        <div class="flex justify-between align-align-middle h-[90px] bg-white" style="align-items: center;">
+            <div class="flex flex-row justify-start ">
+                <!--logo-->
+            <img src="logoAPI.png" alt="logo APIPP" class="mt-[5px] w-[120px] h-[120px]">
+                 <!--nombre-->
+            <a href="index_a.html" class="my-[5px]  mx-[10px] text-[80px] font-[Poppins] bg-opacity-0 text-[#0F2B66]">APIPP</a>
+            </div>
+             <!--seccion navbar-->
+            <nav class="bg-[#2E4066] ">
+                <div class="container px-6 py-[10px] w-[74vw]">
+                        <div class="absolute inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-100 ease-in-out 
+                        dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between">
+                            <div class="flex flex-row justify-end text-white capitalize w-[80vw] font-[Roboto]">
+                                <a href="#" class="mt-2 transition-colors transform lg:mt-0 lg:mx-4 hover:text-white dark:hover:text-gray-200">ACERCA DE APIPP</a>
+                                <a href="#" class="mt-2 transition-colors transform lg:mt-0 lg:mx-4 font-[Roboto] hover:text-white dark:hover:text-gray-200">DOCUMENTACION</a>
+                            </div>
+                        </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container mx-auto py-8">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <h1 class="text-[#0F2B66] text-[300px] font-[Poppins] " style="color: #2E4066;
+            text-shadow:
+             -1px -1px 0 #2E4066,
+              1px -1px 0 #2E4066,
+              -1px 1px 0 #2E4066,
+               1px 1px 0 #2E4066; font-[Poppins] ; font-size: 40px; ">DOCUMENTACION DE LA API</h1>
+
+            <h1 class="text-[#0F2B66] text-[100px] font-[Poppins] " style="color: #2E4066;
+            text-shadow:
+             -1px -1px 0 #2E4066,
+              1px -1px 0 #2E4066,
+              -1px 1px 0 #2E4066,
+               1px 1px 0 #2E4066; font-[Poppins] ; font-size: 30px; ">Endpoint 1</h1>
+            <p class="mb-4">Descripción del endpoint 1.</p>
+
+            <h3 class="text-lg font-bold mb-2">Parámetros</h3>
+            <div class="bg-gray-200 rounded-lg p-4 mb-8"style="width: 90vw; height:500px; overflow-y:scroll; overflow-wrap: break-word;" >
+                <pre><code class="language-json scroll-margin-top: 1px" style="width: 100px; height:115px; overflow-y:scroll; overflow-wrap: break-word; text-align-content:left;">
+{
+"penitenciarias": [
+    {
+    "cant_pabellones": 2000,
+    "direccion": "AVDA SANTA TERESA",
+    "cant_celdas": 800,
+    "ciudad": "Asuncion",
+    "cant_camas": 2000,
+    "nombre": "Penitenciaria Nacional de TACUMBÚ",
+    "id": 1,
+    "cant_reclusos": 4000, 
+    "cant_funcionarios": 600,
+    "capacidad": 3000,
+    "pais": "Paraguay",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Tacumbu.prison.jpg"
+    },
+    {
+    "cant_pabellones": 5,
+    "direccion": "AVDA Mariscal Lopez",
+    "cant_celdas": 150,
+    "ciudad": "Asuncion",
+    "cant_camas": 250,
+    "nombre": "Penitenciaria Nacional del buen pastor ",
+    "id": 2,
+    "cant_reclusos": 373,
+    "cant_funcionarios": 100,
+    "capacidad": 400,
+    "pais": "Paraguay",
+    "foto": "https://cloudfront-us-east-1.images.arcpublishing.com/lanacionpy/XWA723BEBFGMJEADBGYDH5LGKA.jpg"
+    },
+    {
+    "cant_pabellones": 4,
+    "direccion": "12 de Octubre",
+    "cant_celdas": 80,
+    "ciudad": "Emboscada",
+    "cant_camas": 250,
+    "nombre": "Penitenciaria Juan de la Vega",
+    "id": 3,
+    "cant_reclusos": 313,
+    "cant_funcionarios": 100,
+    "capacidad": 250,
+    "pais": "Paraguay",
+    "foto": "https://www.pj.gov.py/images/noticias/11-05-20-5eb972ba355ee-4.jpg"
+    },
+    {
+    "cant_pabellones": 9,
+    "direccion": "12 de Octubre",
+    "cant_celdas": 300,
+    "ciudad": "Emboscada",
+    "cant_camas": 500,
+    "nombre": "Penitenciaria Nacional de Emboscada",
+    "id": 4,
+    "cant_reclusos": 726,
+    "cant_funcionarios": 300,
+    "capacidad": 800,
+    "pais": "Paraguay",
+    "foto": "https://www.itaipu.gov.br/sites/default/files/u56/emboscada_4.JPG"
+    },
+    {
+    "cant_pabellones": 5,
+    "direccion": "Gral Bernardino Caballero",
+    "cant_celdas": 400,
+    "ciudad": "Concepcion",
+    "cant_camas": 500,
+    "nombre": "Penitenciaria Regional de Concepcion",
+    "id": 5,
+    "cant_reclusos": 1000,
+    "cant_funcionarios": 500,
+    "capacidad": 1200,
+    "pais": "Paraguay",
+    "foto": "https://www.ministeriodejusticia.gov.py/application/files/3615/2509/9073/sede_concepcion.jpeg"
+    },
+    {
+    "cant_pabellones": 5,
+    "direccion": "Ruta 1 ",
+    "cant_celdas": 400,
+    "ciudad": "Misiones",
+    "cant_camas": 500,
+    "nombre": "Penitenciaria Regional de Misiones",
+    "id": 6,
+    "cant_reclusos": 1000,
+    "cant_funcionarios": 500,
+    "capacidad": 1200,
+    "pais": "Paraguay",
+    "foto": "https://media.ultimahora.com/p/3f164adcaf844154340bfe4178c664f3/adjuntos/161/imagenes/009/749/0009749008/penitenciaria-regional-misionesjpg.jpg"
+    },
+    {
+    "cant_pabellones": 5,
+    "direccion": "Ruta 8 ",
+    "cant_celdas": 400,
+    "ciudad": "Coronel Oviedo",
+    "cant_camas": 500,
+    "nombre": "Penitenciaria Regional de Coronel Oviedo",
+    "id": 7,
+    "cant_reclusos": 1000,
+    "cant_funcionarios": 500,
+    "capacidad": 1200,
+    "pais": "Paraguay",
+    "foto": "https://www.lanacion.com.py/resizer/iGaPH3fVQApHrSzQu0Zp7ON9Fug=/1016x0/smart/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/lanacionpy/QSIZPHVQ5VBSHO3KQ5Y3SK2QDA"
+    },
+    {
+    "cant_pabellones": 5,
+    "direccion": "Ruta 2 ",
+    "cant_celdas": 400,
+    "ciudad": "Itagua",
+    "cant_camas": 500,
+    "nombre": "Centro educativo itagua",
+    "id": 8,
+    "cant_reclusos": 1000,
+    "cant_funcionarios": 500,
+    "capacidad": 1200,
+    "pais": "Paraguay",
+    "foto": "https://hoypyspace.sfo2.cdn.digitaloceanspaces.com/imagenes/2021/02/08130206/2011-04-07_centro-educativo-de-itaugua.jpg"
+    }
+    ]
+    }
+</code></pre>
+            </div>
+
+            <h3 class="text-lg font-bold mb-2">Respuesta</h3>
+            <div class="bg-gray-200 rounded-lg p-4">
+                <pre><code class="language-json">{
+    "respuesta": "valor de la respuesta"
+}</code></pre>
+            </div>
+
+            <h1 class="text-[#0F2B66] text-[100px] font-[Poppins] " style="color: #2E4066;
+            text-shadow:
+             -1px -1px 0 #2E4066,
+              1px -1px 0 #2E4066,
+              -1px 1px 0 #2E4066,
+               1px 1px 0 #2E4066; font-[Poppins] ; font-size: 30px; ">Endpoint 2</h1>
+            <p class="mb-4">Descripción del endpoint 2.</p>
+
+            <h3 class="text-lg font-bold mb-2">Parámetros</h3>
+                <div class="bg-gray-200 rounded-lg p-4 mb-8"style="width: 90vw; height:500px; overflow-y:scroll; overflow-wrap: break-word;" >
+                    <pre><code class="language-json scroll-margin-top: 1px" style="width: 100px; height:115px; overflow-y:scroll; overflow-wrap: break-word; text-align-content:left;">
+
+                    </code></pre>   
+                </div>
+
+            <h3 class="text-lg font-bold mb-2">Respuesta</h3>
+            <div class="bg-gray-200 rounded-lg p-4">
+                <pre><code class="language-json">{
+    "respuesta": "otro valor de respuesta"
+}</code></pre>
+</div>
+        </div>
+    </div>
+</body>
+</html>
