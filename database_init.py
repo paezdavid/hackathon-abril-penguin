@@ -15,8 +15,11 @@ cursor.execute('''
      capacidad INTEGER, 
      ciudad TEXT,
      pais TEXT,
+<<<<<<< HEAD
      cant_camas INTEGER,
      foto TEXT
+=======
+>>>>>>> 712a0ca70b1945b8b2629abb4c4f314ac3537905
      ) ''')
 
 # with open('tacumbu.jpg','rb') as f:
