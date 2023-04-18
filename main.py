@@ -7,15 +7,16 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-# Create the engine
+# Crear el motor
 engine = create_engine('sqlite:///penitenciarias.db', echo=True)
 
-# Create a session factory
+# Crear la session factory
 Session = sessionmaker(bind=engine)
 
-# Define the Base class
+# Definir la clase Base
 Base = declarative_base()
 
+# Definimos nuestro modelo de DB
 class Penitenciarias(Base):
     __tablename__ = "penitenciarias"
     id = Column(Integer, primary_key=True)
@@ -29,27 +30,31 @@ class Penitenciarias(Base):
     ciudad = Column(String)
     pais = Column(String)
     cant_camas = Column(Integer)
+    foto= Column(String)
 
-
+# Iniciamos una sesion
 session = Session()
 
-
+# Traemos todos los registros
 penitenciarias = session.query(Penitenciarias).all()
+
 session.close()
 
-    # print(penitenciarias)
+
+
 @app.get("/penitenciarias")
 def ver_penitenciarias():
+    
     
     return {'penitenciarias': penitenciarias}
 
 
 @app.get("/penitenciarias/{item_id}")
 def read_item(item_id: int):
+    
     for penitenciaria in penitenciarias:
         if penitenciaria.id == item_id:
-
-            return {
+            return  {
                 "id": penitenciaria.id,
                 "direccion": penitenciaria.direccion,
                 "cant_funcionarios": penitenciaria.cant_funcionarios,
@@ -60,6 +65,6 @@ def read_item(item_id: int):
                 "cant_reclusos": penitenciaria.cant_reclusos,
                 "cant_celdas": penitenciaria.cant_celdas,
                 "ciudad": penitenciaria.ciudad,
-                "cant_camas": penitenciaria.cant_camas
+                "cant_camas": penitenciaria.cant_camas,
+                "foto": penitenciaria.foto
             }
-    
