@@ -1,180 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>APIPP</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
-    </style>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@100&display=swap");
-    </style>
-    <link rel="icon" href="/static/logoAPI.png" />
-  </head>
-  <body class="bg-[url(BANNER_WEB-modified.png)] bg-cover">
-    <header>
-      <div
-        class="flex justify-between align-align-middle h-[90px] bg-white"
-        style="align-items: center"
-      >
-        <div class="flex flex-row justify-start">
-          <img
-            src="/static/logoAPI.png"
-            alt="logo APIPP"
-            class="mt-[5px] w-[120px] h-[120px]"
-          />
-          <a
-            href="index_a.html"
-            class="my-[5px] mx-[10px] text-[80px] font-[Poppins] bg-opacity-0 text-[#0F2B66]"
-            >APIPP</a
-          >
-        </div>
-        <nav class="bg-[#2E4066]">
-          <div class="container px-6 py-[10px] w-[74vw]">
-            <div
-              class="absolute inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-100 ease-in-out dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between"
-            >
-              <div
-                class="flex flex-row justify-end text-white capitalize w-[80vw] font-[Roboto]"
-              >
-                <a
-                  href="#"
-                  class="mt-2 transition-colors transform lg:mt-0 lg:mx-4 hover:text-white dark:hover:text-gray-200"
-                  >ACERCA DE APIPP</a
-                >
-                <a
-                  href="/docs"
-                  class="mt-2 transition-colors transform lg:mt-0 lg:mx-4 font-[Roboto] hover:text-white dark:hover:text-gray-200"
-                  >DOCUMENTACION</a
-                >
-              </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APIPP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+  </style>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@100&display=swap");
+  </style>
+  <link rel="icon" href="{{ url_for('static', filename='logoAPI.png') }}" />
+</head>
+
+<body class="bg-cyan-[10] bg-cover">
+  <header>
+    <div class="flex justify-between align-align-middle h-[90px] bg-white" style="align-items: center">
+      <div class="flex flex-row justify-start">
+        <img src="{{ url_for('static', filename='logoAPI.png') }}" alt="logo APIPP"
+          class="mt-[5px] w-[120px] h-[120px]" />
+        <a href="/"
+          class="my-[5px] mx-[10px] text-[80px] font-[Poppins] bg-opacity-0 text-[#0F2B66]">APIPP</a>
+      </div>
+      <nav class="bg-[#2E4066]">
+        <div class="container px-6 py-[10px] w-[74vw]">
+          <div
+            class="absolute inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-100 ease-in-out dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between">
+            <div class="flex flex-row justify-end text-white capitalize w-[80vw] font-[Roboto]">
+              <a href="/docs"
+                class="mt-2 transition-colors transform lg:mt-0 lg:mx-4 font-[Roboto] hover:text-white dark:hover:text-gray-200">DOCUMENTACION</a>
             </div>
           </div>
-        </nav>
-      </div>
-    </header>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-    <main class="flex flex-row-reverse justify-between">
-      <div class="flex flex-col align-end justify-center mx-[40px]">
-        <h1 class="text-[#0F2B66] text-[60px] font-[Poppins]" style="color: #ffff;
+  <main class="flex flex-row-reverse justify-between">
+    <div class="flex flex-col align-end mx-[40px]">
+      <h1 class="text-[#0F2B66] text-[50px] font-[Poppins] flex justify-center" style="color: #2E4066;
         text-shadow:
-         -1px -1px 0 #ffff,  
-          1px -1px 0 #ffffff,
-          -1px 1px 0 #ffffff,
-           1px 1px 0 #ffffff;">QUIENES SOMOS</h1>
-           <p class="my-[5px]">APIPP por sus siglas (interfaz de programación de aplicaciones de Penitenciarias Paraguayas) es una solución a la falta de centralización y digitalización  de los datos del sistema penitenciario.</p>
-           <h2>MISION</h2>
-            <p>Buscamos disponibilizar la información del sistema penitenciario de una forma ágil para optimizar los tiempos de las partes beneficiadas y de esa manera contribuir a una correcta gestión de los procesos para las personas privadas de libertad. </p>
-           <h2>VISION</h2>
-           <p>Con esta solución queremos estandarizar la información de inclusividad a diferentes entidades para una correcta gestión que beneficie tanto a el personal penitenciario como a las personas privadas de su libertad y también apuntamos a la digitalización y actualización constante de datos.</p>
+         -1px -1px 0 #2E4066, 
+          1px -1px 0 #2E4066,
+          -1px 1px 0 #2E4066,
+           1px 1px 0 #2E4066;">QUIENES SOMOS</h1>
+      <p class="my-[5px]">APIPP por sus siglas (interfaz de programación de aplicaciones de Penitenciarias Paraguayas)
+        es una solución a la falta de centralización y digitalización de los datos del sistema penitenciario.</p>
+      <h2 class="text-[#0F2B66] text-[50px] font-[Poppins] flex justify-center" style="color: #2E4066;
+           text-shadow:
+            -1px -1px 0 #2E4066, 
+             1px -1px 0 #2E4066,
+             -1px 1px 0 #2E4066,
+              1px 1px 0 #2E4066;">MISION</h2>
+      <p class="my-[5px]">Buscamos disponibilizar la información del sistema penitenciario de una forma ágil para
+        optimizar los tiempos de las partes beneficiadas y de esa manera contribuir a una correcta gestión de los
+        procesos para las personas privadas de libertad. </p>
+      <h2 class="text-[#0F2B66] text-[50px] font-[Poppins] flex justify-center" style="color: #2E4066;
+           text-shadow:
+            -1px -1px 0 #2E4066, 
+             1px -1px 0 #2E4066,
+             -1px 1px 0 #2E4066,
+              1px 1px 0 #2E4066;">VISION</h2>
+      <p class="my-[5px]">Con esta solución queremos estandarizar la información de inclusividad a diferentes entidades
+        para una correcta gestión que beneficie tanto a el personal penitenciario como a las personas privadas de su
+        libertad y también apuntamos a la digitalización y actualización constante de datos.</p>
+    </div>
+  
+    <!--contenedor de tarjetas-->
+    <div class="container mx-auto flex flex-col items-start justify-start h-screen">
+      <div class="bg-indigo-900 rounded-lg p-6 shadow-lg" id="contenedor">
+        <h2 class="font-bold text-white text-3xl"><span>Penitenciaria: <span
+              class="font-normal">{{prisiones.penitenciarias[0].nombre}}</span></h2>
+        <h2 class="font-bold text-white text-3xl"><span>Ubicacion:<span class="font-normal">{{prisiones.penitenciarias[0].direccion}} - {{prisiones.penitenciarias[0].ciudad}}</span></h2>
+        <h2 class="font-bold text-white text-3xl mb-4"><span>capacidad:<span class="font-normal"> {{prisiones.penitenciarias[0].capacidad}} personas.</span>
+        </h2>
+        <img class="mx-auto rounded-lg shadow-lg mb-4" src="{{prisiones.penitenciarias[0].foto }}" alt="" width="400">
       </div>
-      <div>
-        <!--contenedor de tarjetas-->
+    </div>
 
-        <div
-          style="
-            -webkit-text-size-adjust: 100%;
-            font: 112.5%/1.625 -apple-system, 'BlinkMacSystemFont', 'Segoe UI',
-              'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji',
-              'Segoe UI Emoji', 'Segoe UI Symbol';
-            color: hsla(0, 0%, 0%, 0.8);
-            font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI',
-              'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji',
-              'Segoe UI Emoji', 'Segoe UI Symbol';
-            font-weight: normal;
-            word-wrap: break-word;
-            font-kerning: normal;
-            font-variant-ligatures: none;
-            text-rendering: optimizelegibility;
-            -webkit-font-smoothing: antialiased;
-            text-decoration-skip-ink: auto;
-            box-sizing: inherit;
-            width: 600px;
-            height: 400px;
-            display: flex;
-            overflow: hidden;
-            background: #ffff;
-            border-radius: 0.5rem;
-            margin-top: 60px;
-            margin-left: 25px;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-              rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-          "
-        >
-          <img src="" alt="" />
-          <div
-            style="
-              -webkit-text-size-adjust: 100%;
-              font: 112.5%/1.625 -apple-system, 'BlinkMacSystemFont', 'Segoe UI',
-                'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji',
-                'Segoe UI Emoji', 'Segoe UI Symbol';
-              font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI',
-                'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji',
-                'Segoe UI Emoji', 'Segoe UI Symbol';
-              font-weight: normal;
-              word-wrap: break-word;
-              font-kerning: normal;
-              font-variant-ligatures: none;
-              text-rendering: optimizelegibility;
-              -webkit-font-smoothing: antialiased;
-              text-decoration-skip-ink: auto;
-              box-sizing: inherit;
-              flex: 3 1 0%;
-              position: relative;
-              padding: 0.75rem;
-              color: rgb(0, 0, 0);
-              display: flex;
-              flex-direction: column;
-            "
-          >
-        <div style="    -webkit-text-size-adjust: 100%;
-        font: 112.5%/1.625 -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
-        font-family: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
-        font-weight: normal;
-        word-wrap: break-word;
-        font-kerning: normal;
-        font-variant-ligatures: none;
-        text-rendering: optimizelegibility;
-        -webkit-font-smoothing: antialiased;
-        text-decoration-skip-ink: auto;
-        color: rgb(0, 0, 0);
-        box-sizing: inherit;
-        flex: 1 1 0%;
-        display: flex;
-        flex-direction: column;
-        -webkit-box-pack: start;
-        justify-content: flex-start;"><!--seccion de texto 1-->
-        <a href="http://">NOMBRE PENITENCIARIA</a>
-        <span>texto x</span>
-        </div>
-        <div style="    -webkit-text-size-adjust: 100%;
-        font: 112.5%/1.625 -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
-        font-family: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
-        font-weight: normal;
-        word-wrap: break-word;
-        font-kerning: normal;
-        font-variant-ligatures: none;
-        text-rendering: optimizelegibility;
-        -webkit-font-smoothing: antialiased;
-        text-decoration-skip-ink: auto;
-        color: rgb(0, 0, 0);
-        box-sizing: inherit;
-        flex: 1 1 0%;
-        display: flex;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        justify-content: center;"><!--seccion de texto 2-->
-        <span>TEXTO 2</span>    
-        </div>
-        <div><!--seccion de texto 3--></div>
-        </div>
-        </div>
+  </main>
+
+  <footer class="bg-[#ffff] mt-[50px]">
+    <div class="flex flex-col items-center sm:flex-row sm:justify-between mx-[20px]">
+      <p class="text-sm text-[#0F2B66]">©Todos los derechos reservados. Hecho con 💙 en colaboración con Penguin Academy
+      </p>
+      <div class="flex flex-row justify-end mx-[20px]">
+        <img class="w-[50px] h-[50px]" src=static/logoAPI.png alt="Logo APIPP">
+        <h1 class="my-[5px]  mx-[10px] text-[25px] font-[Poppins] bg-opacity-0 text-[#0F2B66]"> APIPP </h1>
       </div>
-    </main>
+    </div>
+    </div>
+  </footer>
+</body>
 
-    <footer></footer>
-  </body>
 </html>

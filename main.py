@@ -44,8 +44,6 @@ session.close()
 
 @app.get("/penitenciarias")
 def ver_penitenciarias():
-    
-    
     return {'penitenciarias': penitenciarias}
 
 
