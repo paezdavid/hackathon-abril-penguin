@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIPP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@100&display=swap');
+    </style>
+    <link rel="icon" href="/static/logoAPI.png">
+</head>
+
+<body>
+    <header>
+        <div class="flex justify-between align-align-middle h-[90px] bg-white" style="align-items: center;">
+            <div class="flex flex-row justify-start ">
+                <img src="/static/logoAPI.png" alt="logo APIPP" class="mt-[5px] w-[120px] h-[120px]">
+                <a href="/" class="my-[5px]  mx-[10px] text-[80px] font-[Poppins] bg-opacity-0 text-[#0F2B66]">APIPP</a>
+            </div>
+            <nav class="bg-[#2E4066] ">
+                <div class="container px-6 py-[10px] w-[74vw]">
+                    <div
+                        class="absolute inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-100 ease-in-out 
+                        dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between">
+                        <div class="flex flex-row justify-end text-white capitalize w-[80vw] font-[Roboto]">
+                            <a href="/docs"
+                                class="mt-2 transition-colors transform lg:mt-0 lg:mx-4 font-[Roboto] hover:text-white dark:hover:text-gray-200">DOCUMENTACION</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="flex align-center justify-center mx-[10px]">
+            <h1 class="mt-[30px] text-[#0F2B66] text-[70px] font-[Poppins] " style="color: #2E4066;
+        text-shadow:
+         -1px -1px 0 #2E4066,  
+          1px -1px 0 #2E4066,
+          -1px 1px 0 #2E4066,
+           1px 1px 0 #2E4066;">DOCUMENTACION DE LA API </h1>
+    </main>
+
+    <div class="px-10 sm:px-10 lg:px-5 margin-left: 0px container mx-auto py-50">
+        <div class="sm:flex sm:items-center">
+          <div class="sm:flex-auto">
+            <h1 class="mt-[30px] text-[#0F2B66] font-[Poppins] " style="color: #2E4066;
+            text-shadow:
+             -1px -1px 0 #2E4066,
+              1px -1px 0 #2E4066,
+              -1px 1px 0 #2E4066,
+               1px 1px 0 #2E4066; font-size: 40px; ">Tipos de datos</h1>
+            <p class="mt-2 text-sm text-gray-700 mb-4 " style="font-size: 20px">Lista de los tipos de datos recolectados</p>
+          </div>
+          <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
+
+          </div>
+        </div>
+        <div class="mt-8 flow-root">
+          <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+              <table class="min-w-full divide-y divide-gray-300 ">
+                <thead>
+                  <tr>
+                    <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0" style="font-size: 20px ; color: #2E4066"> Identificador</th>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900" style="font-size: 20px; color: #2E4066">Tipo</th>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900" style="font-size: 20px ; color: #2E4066">Descripcion</th>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900" style="font-size: 20px; color: #2E4066">Ejemplo</th>
+                    <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-0">
+                      <span class="sr-only">Edit</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                  <tr>
+                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0"> id </td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">int</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Es el identificador principal e irrepetible de  cada registro de una penitenciaria </td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"> 3 </td>
+                    <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">direccion</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"> string </td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">El nombre de las calles de donde se encuentra ubicada la penitenciaria</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Avda Mariscal Lopez</td>
+                    <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">cant_funcionarios</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">int</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"> Cantidad de funcionarios que se encuentran dentro de la penitenciaria </td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">100</td>
+                    <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">capacidad</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">int</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Capacidad total de personas que pueden ingresar en una penitenciaria</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">400</td>
+                    <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">pais</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">string</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Pais donde se encuentra la penitenciaria</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Paraguay</td>
+                    <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0"> cant_pabellones </td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">int</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"> Cantidad de pabellones de una penitenciaria</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">5</td>
+                    <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">nombre</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">string</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">El nombre completo de la penitenciaria</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Penitenciaria Nacional del Buen Pastor </td>
+                    <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">cant_reclusos</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">int</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Cantidad de reclusos que estan dentro de una penitenciaria</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">373</td>
+                    <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">cant_celdas</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">int</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Cantidad de celdas que existen dentro de la penitenciaria</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">150</td>
+                    <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">ciudad</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">string</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"> Ciudad donde se encuentra la penitenciaria </td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Asuncion</td>
+                    <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">cant_camas</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">int</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"> Cantidad de plazas para internos en cuanto a las camas disponibles en la cárcel. </td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">250</td>
+                    <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">foto</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">string</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Devuelve un string de una URL donde esta alojado la imagen</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">https://cloudfront-us-east-1.images.arcpublishing.com/lanacionpy/XWA723BEBFGMJEADBGYDH5LGKA.jpg</td>
+                    <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                      
+                    </td>
+                  </tr>
+
+      
+                  <!-- More people... -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+ <div style="margin-left: 0px;">
+
+    <div class="container mx-auto py-100" >
+        <div class=" margin-top: 10px ">
+
+                <h1 class="mt-[30px] text-[#0F2B66] font-[Poppins] mt-10px " style="color: #2E4066;
+                    text-shadow:
+                     -1px -1px 0 #2E4066,
+                      1px -1px 0 #2E4066,
+                      -1px 1px 0 #2E4066,
+                       1px 1px 0 #2E4066; font-size: 40px; margin-top: 40 ">Endpoint 1</h1>
+                <p class="mb-4" style="font-size: 20px;">El primer endpoint <code>http://127.0.0.1:8000/penitenciarias</code> al entrar te retorna un JSON (JavaScript Object Notation) con los datos de todas las penitenciarias que se encuentra en nuestra base de datos, para obtener los datos de todas las penitenciarias</p>
+            </div>
+
+            <h1 class="mt-[30px] text-[#0F2B66]  font-[Poppins] " style="color: #2E4066;
+            text-shadow:
+             -1px -1px 0 #2E4066,
+              1px -1px 0 #2E4066,
+              -1px 1px 0 #2E4066,
+               1px 1px 0 #2E4066; font-size: 40px; ">Parámetros</h1>
+            <div class="bg-gray-200 rounded-lg p-4 mb-0"
+            style="width: 85vw; height:100px; overflow-wrap: break-word;">
+                <pre><code class="language-json"> datos = requests.get("http://127.0.0.1:8000/penitenciarias/").json()
+    return datos
+                </code></pre>
+            </div>
+            <h1 class="mt-[30px] text-[#0F2B66]  font-[Poppins] " style="color: #2E4066;
+            text-shadow:
+             -1px -1px 0 #2E4066,
+              1px -1px 0 #2E4066,
+              -1px 1px 0 #2E4066,
+               1px 1px 0 #2E4066; font-size: 40px; margin-top: 10px; ">Respuesta </h1>
+            <div class="bg-gray-200 rounded-lg p-4 mb-0"
+                    style="width: 85vw; height:700px; overflow-y:scroll; overflow-wrap: break-word;">
+                    <pre><code class="language-json scroll-margin-top: 2px" style="width: 90px; height:100px; overflow-y:scroll; overflow-wrap: break-word;">
+
+{
+    "penitenciarias": [
+      {
+        "cant_pabellones": 2000,
+        "direccion": "AVDA SANTA TERESA",
+        "cant_celdas": 800,
+        "ciudad": "Asuncion",
+        "cant_camas": 2000,
+        "nombre": "Penitenciaria Nacional de TACUMBÚ",
+        "id": 1,
+        "cant_reclusos": 4000,
+        "cant_funcionarios": 600,
+        "capacidad": 3000,
+        "pais": "Paraguay",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Tacumbu.prison.jpg"
+      },
+      {
+        "cant_pabellones": 5,
+        "direccion": "AVDA Mariscal Lopez",
+        "cant_celdas": 150,
+        "ciudad": "Asuncion",
+        "cant_camas": 250,
+        "nombre": "Penitenciaria Nacional del buen pastor ",
+        "id": 2,
+        "cant_reclusos": 373,
+        "cant_funcionarios": 100,
+        "capacidad": 400,
+        "pais": "Paraguay",
+        "foto": "https://cloudfront-us-east-1.images.arcpublishing.com/lanacionpy/XWA723BEBFGMJEADBGYDH5LGKA.jpg"
+      },
+      {
+        "cant_pabellones": 4,
+        "direccion": "12 de Octubre",
+        "cant_celdas": 80,
+        "ciudad": "Emboscada",
+        "cant_camas": 250,
+        "nombre": "Penitenciaria Juan de la Vega",
+        "id": 3,
+        "cant_reclusos": 313,
+        "cant_funcionarios": 100,
+        "capacidad": 250,
+        "pais": "Paraguay",
+        "foto": "https://www.pj.gov.py/images/noticias/11-05-20-5eb972ba355ee-4.jpg"
+      },
+      {
+        "cant_pabellones": 9,
+        "direccion": "12 de Octubre",
+        "cant_celdas": 300,
+        "ciudad": "Emboscada",
+        "cant_camas": 500,
+        "nombre": "Penitenciaria Nacional de Emboscada",
+        "id": 4,
+        "cant_reclusos": 726,
+        "cant_funcionarios": 300,
+        "capacidad": 800,
+        "pais": "Paraguay",
+        "foto": "https://www.itaipu.gov.br/sites/default/files/u56/emboscada_4.JPG"
+      },
+      {
+        "cant_pabellones": 5,
+        "direccion": "Gral Bernardino Caballero",
+        "cant_celdas": 400,
+        "ciudad": "Concepcion",
+        "cant_camas": 500,
+        "nombre": "Penitenciaria Regional de Concepcion",
+        "id": 5,
+        "cant_reclusos": 1000,
+        "cant_funcionarios": 500,
+        "capacidad": 1200,
+        "pais": "Paraguay",
+        "foto": "https://www.ministeriodejusticia.gov.py/application/files/3615/2509/9073/sede_concepcion.jpeg"
+      },
+      {
+        "cant_pabellones": 5,
+        "direccion": "Ruta 1 ",
+        "cant_celdas": 400,
+        "ciudad": "Misiones",
+        "cant_camas": 500,
+        "nombre": "Penitenciaria Regional de Misiones",
+        "id": 6,
+        "cant_reclusos": 1000,
+        "cant_funcionarios": 500,
+        "capacidad": 1200,
+        "pais": "Paraguay",
+        "foto": "https://media.ultimahora.com/p/3f164adcaf844154340bfe4178c664f3/adjuntos/161/imagenes/009/749/0009749008/penitenciaria-regional-misionesjpg.jpg"
+      },
+      {
+        "cant_pabellones": 5,
+        "direccion": "Ruta 8 ",
+        "cant_celdas": 400,
+        "ciudad": "Coronel Oviedo",
+        "cant_camas": 500,
+        "nombre": "Penitenciaria Regional de Coronel Oviedo",
+        "id": 7,
+        "cant_reclusos": 1000,
+        "cant_funcionarios": 500,
+        "capacidad": 1200,
+        "pais": "Paraguay",
+        "foto": "https://www.lanacion.com.py/resizer/iGaPH3fVQApHrSzQu0Zp7ON9Fug=/1016x0/smart/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/lanacionpy/QSIZPHVQ5VBSHO3KQ5Y3SK2QDA"
+      },
+      {
+        "cant_pabellones": 5,
+        "direccion": "Ruta 2 ",
+        "cant_celdas": 400,
+        "ciudad": "Itagua",
+        "cant_camas": 500,
+        "nombre": "Centro educativo itagua",
+        "id": 8,
+        "cant_reclusos": 1000,
+        "cant_funcionarios": 500,
+        "capacidad": 1200,
+        "pais": "Paraguay",
+        "foto": "https://hoypyspace.sfo2.cdn.digitaloceanspaces.com/imagenes/2021/02/08130206/2011-04-07_centro-educativo-de-itaugua.jpg"
+      }
+    ]
+  }                        
+                         
+                </code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="margin-left: 0px; ">
+
+    <div class="container mx-auto py-120">
+        <div class=" ">
+
+                <h1 class="mt-[30px] text-[#0F2B66]  font-[Poppins] " style="color: #2E4066;
+                    text-shadow:
+                     -1px -1px 0 #2E4066,
+                      1px -1px 0 #2E4066,
+                      -1px 1px 0 #2E4066,
+                       1px 1px 0 #2E4066; font-size: 40px; ">Endpoint 2</h1>
+                <p class="mb-4" style="font-size: 20px;">El segundo endpoint <code>http://127.0.0.1:8000/penitenciarias/{id}</code> te retorna un JSON (JavaScript Object Notation) con los datos de la penitenciaria cuyo id coincida con el parametro {id} que se encuentra en el URL, para obtener los datos de una penitenciaria en concreto.</p>
+            </div>
+
+            <h1 class="mt-[30px] text-[#0F2B66]  font-[Poppins] " style="color: #2E4066;
+            text-shadow:
+             -1px -1px 0 #2E4066,
+              1px -1px 0 #2E4066,
+              -1px 1px 0 #2E4066,
+               1px 1px 0 #2E4066; font-size: 40px; ">Parámetros</h1>
+            <div class="bg-gray-200 rounded-lg p-4 mb-0"
+            style="width: 85vw; height:130px; overflow-wrap: break-word;">
+                <pre><code class="language-json"> @app.route("/")
+def prueba():
+    datos = requests.get("http://127.0.0.1:8000/penitenciarias/1").json()
+    return datos
+                    
+                </code></pre>
+            </div>
+
+            <h1 class="mt-[30px] text-[#0F2B66]  font-[Poppins] " style="color: #2E4066;
+            text-shadow:
+             -1px -1px 0 #2E4066,
+              1px -1px 0 #2E4066,
+              -1px 1px 0 #2E4066,
+               1px 1px 0 #2E4066; font-size: 40px; ">Respuesta </h1>
+            <div class="bg-gray-200 rounded-lg p-4 mb-0"
+                    style="width: 85vw; height:400px; overflow-y:scroll; overflow-wrap: break-word;">
+                    <pre><code class="language-json" style="width: 50px; height:80px; overflow-wrap: break-word;">                    
+{
+    {
+  "id": 1,
+  "direccion": "AVDA SANTA TERESA",
+  "cant_funcionarios": 600,
+  "capacidad": 3000,
+  "pais": "Paraguay",
+  "cant_pabellones": 2000,
+  "nombre": "Penitenciaria Nacional de TACUMBÚ",
+  "cant_reclusos": 4000,
+  "cant_celdas": 800,
+  "ciudad": "Asuncion",
+  "cant_camas": 2000,
+  "foto": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Tacumbu.prison.jpg"
+}
+}
+
+                </code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+
+<main>
+    <div class="flex align-center justify-center mx-[10px]">
+        <h1 class="mt-[30px] text-[#0F2B66] text-[70px] font-[Poppins] " style="color: #2E4066;
+    text-shadow:
+     -1px -1px 0 #2E4066,  
+      1px -1px 0 #2E4066,
+      -1px 1px 0 #2E4066,
+       1px 1px 0 #2E4066;">Como usar la API</h1>
+    </div>
+</main>
+<div>
+
+  <div style="margin-left: 0px;">
+
+    <div class="container mx-auto py-100" >
+        <div class=" ">
+        </div>
+        
+        <h1 class="mt-[30px] text-[#0F2B66]  font-[Poppins] " style="color: #2E4066;
+        text-shadow:
+        -1px -1px 0 #2E4066,
+        1px -1px 0 #2E4066,
+        -1px 1px 0 #2E4066,
+        1px 1px 0 #2E4066; font-size: 40px; ">Python</h1>
+        <p class="mb-4" style="font-size: 20px;">Para utilizar los endpoint se debe utilizar la biblioteca Requests para con el metodo get para extraer los datos del endpoint que desea utilizar
+        </p>
+            <div class="bg-gray-200 rounded-lg p-4 mb-0"
+            style="width: 85vw; height:100px; overflow-wrap: break-word;">
+                <pre><code class="language-json"> data = requests.get("URL/penitenciarias/{id}").json()
+                </code></pre>
+            </div>
+            <div style="margin-left: 0px;">
+
+              <div class="container mx-auto py-100" >
+                  <div class=" ">
+                  </div>
+                  
+                  <h1 class="mt-[30px] text-[#0F2B66]  font-[Poppins] " style="color: #2E4066;
+                  text-shadow:
+                  -1px -1px 0 #2E4066,
+                  1px -1px 0 #2E4066,
+                  -1px 1px 0 #2E4066,
+                  1px 1px 0 #2E4066; font-size: 40px; ">cURL</h1>
+                  <p class="mb-4" style="font-size: 20px;">Para utilizar un endpoint en una terminal, se debe utilizar  'curl' para realizar el método GET y extraer los datos del endpoint deseado y te tira dentro de la terminal el json.
+                  </p>
+                      <div class="bg-gray-200 rounded-lg p-4 mb-0"
+                      style="width: 85vw; height:700 ; overflow-wrap: break-word;">
+                          <pre><code class="language-json"> curl -X GET "URL/penitenciarias/{id}" | jq
+                          </code></pre>
+                      </div>
+              </div>  
+
+
+
+
+
+              <div class="container mx-auto py-100" >
+                <div class=" ">
+                </div>
+                
+                <h1 class="mt-[30px] text-[#0F2B66]  font-[Poppins] " style="color: #2E4066;
+                text-shadow:
+                -1px -1px 0 #2E4066,
+                1px -1px 0 #2E4066,
+                -1px 1px 0 #2E4066,
+                1px 1px 0 #2E4066; font-size: 40px; ">JavaScript</h1>
+                <p class="mb-4" style="font-size: 20px;">Para utilizar un endpoint en JavaScript (Node.js), se debe utilizar la biblioteca 'axios' para realizar el método GET y extraer los datos del endpoint deseado.
+                </p>
+                    <div class="bg-gray-200 rounded-lg p-4 mb-0"
+                    style="width: 85vw; height:300px; overflow-wrap: break-word;">
+                        <pre><code class="language-json"> 
+const axios = require('axios');
+
+axios.get(`URL/penitenciarias/${id}`)
+  .then(response => {
+    const data = response.data;
+    console.log(data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
+                        </code></pre>
+                    </div>
+            </div>  
+
+
+
+            <footer class="bg-[#ffffff] mt-[50px]">
+              <div class="flex flex-col items-center sm:flex-row sm:justify-between mx-[20px]">
+                <p class="text-sm text-[#2E4066]">©Todos los derechos reservados. Hecho con 💙 en colaboración con Penguin Academy
+                </p>
+                <div class="flex flex-row justify-end mx-[20px]">
+                  <img class="w-[50px] h-[50px]" src=static/logoAPI.png alt="Logo APIPP">
+                  <h1 class="my-[5px]  mx-[10px] text-[25px] font-[Poppins] bg-opacity-0 text-[#2E4066]"> APIPP </h1>
+                </div>
+              </div>
+              </div>
+            </footer>
+
+
+        
+</body>
+
+</html>
