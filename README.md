@@ -1,4 +1,8 @@
-## Hackathon Abril
+# APIPP (API de Penitenciarias Paraguayas)
+
+## Descripción del Proyecto: 
+APIPP centraliza datos del sistema penitenciario del Paraguay, promueve la transparencia de la información y hace estos datos de libre acceso al público general. La accesibilidad a estos datos ayudará principalmente a la agilización de sistemas nacionales, a analistas y a investigadores.
+
 ## Inicializar el proyecto
 ```git clone https://github.com/paezdavid/hackathon-abril-penguin.git```
 
