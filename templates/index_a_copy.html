@@ -17,18 +17,18 @@
 </head>
 
 <body class="bg-cyan-[10] bg-cover">
-  <header>
+  <header class="mb-[15px]">
     <div class="flex justify-between align-align-middle h-[90px] bg-white" style="align-items: center">
       <div class="flex flex-row justify-start">
         <img src="{{ url_for('static', filename='logoAPI.png') }}" alt="logo APIPP"
           class="mt-[5px] w-[120px] h-[120px]" />
         <a href="/"
-          class="my-[5px] mx-[10px] text-[80px] font-[Poppins] bg-opacity-0 text-[#0F2B66]">APIPP</a>
+          class="hidden lg:block lg:my-[5px] lg:mx-[10px] lg:text-[80px] lg:font-[Poppins] lg:bg-opacity-0 lg:text-[#0F2B66]">APIPP</a>
       </div>
       <nav class="bg-[#2E4066]">
         <div class="container px-6 py-[10px] w-[74vw]">
           <div
-            class="absolute inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-100 ease-in-out dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between">
+            class="absolute inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-100 ease-in-out dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-[#2E4066] lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between">
             <div class="flex flex-row justify-end text-white capitalize w-[80vw] font-[Roboto]">
               <a href="/docs"
                 class="mt-2 transition-colors transform lg:mt-0 lg:mx-4 font-[Roboto] hover:text-white dark:hover:text-gray-200">DOCUMENTACION</a>
@@ -47,7 +47,7 @@
           1px -1px 0 #2E4066,
           -1px 1px 0 #2E4066,
            1px 1px 0 #2E4066;">QUIENES SOMOS</h1>
-      <p class="my-[5px]">APIPP por sus siglas (interfaz de programación de aplicaciones de Penitenciarias Paraguayas)
+      <p class="my-[5px] transition ease-in-out delay-150 bg-blue-0 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-0 duration-300 ...">APIPP por sus siglas (interfaz de programación de aplicaciones de Penitenciarias Paraguayas)
         es una solución a la falta de centralización y digitalización de los datos del sistema penitenciario.</p>
       <h2 class="text-[#0F2B66] text-[50px] font-[Poppins] flex justify-center" style="color: #2E4066;
            text-shadow:
@@ -55,7 +55,7 @@
              1px -1px 0 #2E4066,
              -1px 1px 0 #2E4066,
               1px 1px 0 #2E4066;">MISION</h2>
-      <p class="my-[5px]">Buscamos disponibilizar la información del sistema penitenciario de una forma ágil para
+      <p class="my-[5px] transition ease-in-out delay-150 bg-blue-0 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-0 duration-300 ...">Buscamos disponibilizar la información del sistema penitenciario de una forma ágil para
         optimizar los tiempos de las partes beneficiadas y de esa manera contribuir a una correcta gestión de los
         procesos para las personas privadas de libertad. </p>
       <h2 class="text-[#0F2B66] text-[50px] font-[Poppins] flex justify-center" style="color: #2E4066;
@@ -64,32 +64,42 @@
              1px -1px 0 #2E4066,
              -1px 1px 0 #2E4066,
               1px 1px 0 #2E4066;">VISION</h2>
-      <p class="my-[5px]">Con esta solución queremos estandarizar la información de inclusividad a diferentes entidades
-        para una correcta gestión que beneficie tanto a el personal penitenciario como a las personas privadas de su
-        libertad y también apuntamos a la digitalización y actualización constante de datos.</p>
-    </div>
+      <p class="my-[5px] transition ease-in-out delay-150 bg-blue-0 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-0 duration-300 ...">Con esta solución queremos estandarizar la información de inclusividad a diferentes entidades
+        para una correcta gestión que beneficie tanto al personal penitenciario como a las personas privadas de su
+        libertad y también apuntamos a la digitalización y actualización constante de datos.</p> 
+
+      </div>
   
-    <!--contenedor de tarjetas-->
-    <div class="container mx-auto flex flex-col items-start justify-start h-screen">
-      <div class="bg-indigo-900 rounded-lg p-6 shadow-lg" id="contenedor">
+    <div class="container mx-auto ml-[20px] flex flex-col items-start justify-start h-screen ">
+      <div class="bg-[#2E4066] rounded-lg p-6 shadow-lg hover:bg-slate-400 " id="contenedor">
         <h2 class="font-bold text-white text-3xl"><span>Penitenciaria: <span
               class="font-normal">{{prisiones.penitenciarias[0].nombre}}</span></h2>
-        <h2 class="font-bold text-white text-3xl"><span>Ubicacion:<span class="font-normal">{{prisiones.penitenciarias[0].direccion}} - {{prisiones.penitenciarias[0].ciudad}}</span></h2>
-        <h2 class="font-bold text-white text-3xl mb-4"><span>capacidad:<span class="font-normal"> {{prisiones.penitenciarias[0].capacidad}} personas.</span>
+        <h2 class="font-bold text-white text-2xl"><span>Ubicacion: <span class="font-normal">{{prisiones.penitenciarias[0].direccion}} - {{prisiones.penitenciarias[0].ciudad}}</span></h2>
+        <h2 class="font-bold text-white text-2xl mb-4"><span>Capacidad: <span class="font-normal"> {{prisiones.penitenciarias[0].capacidad}} personas.</span>
         </h2>
-        <img class="mx-auto rounded-lg shadow-lg mb-4" src="{{prisiones.penitenciarias[0].foto }}" alt="" width="400">
+        <img class="mx-auto rounded-lg shadow-lg mb-4 w-[500px] h-[290px]" src="{{prisiones.penitenciarias[0].foto }}" alt="imagen penitenciaria">
+      </div>
+    </div>
+    <div class="container mx-auto ml-[20px] flex flex-col items-start justify-start h-screen">
+      <div class="bg-[#2E4066] rounded-lg p-6 shadow-lg hover:bg-slate-400" id="contenedor">
+        <h2 class="font-bold text-white text-3xl"><span>Penitenciaria: <span
+              class="font-normal">{{prisiones.penitenciarias[1].nombre}}</span></h2>
+        <h2 class="font-bold text-white text-2xl"><span>Ubicacion: <span class="font-normal">{{prisiones.penitenciarias[1].direccion}} - {{prisiones.penitenciarias[1].ciudad}}</span></h2>
+        <h2 class="font-bold text-white text-2xl mb-4"><span>Capacidad: <span class="font-normal"> {{prisiones.penitenciarias[1].capacidad}} personas.</span>
+        </h2>
+        <img class="mx-auto rounded-lg shadow-lg mb-4 w-[500px] h-[290px]" src="{{prisiones.penitenciarias[1].foto }}" alt="imagen penitenciaria" >
       </div>
     </div>
 
   </main>
 
-  <footer class="bg-[#ffff] mt-[50px]">
+  <footer class="bg-[#2E4066] mt-[50px]">
     <div class="flex flex-col items-center sm:flex-row sm:justify-between mx-[20px]">
-      <p class="text-sm text-[#0F2B66]">©Todos los derechos reservados. Hecho con 💙 en colaboración con Penguin Academy
+      <p class="text-sm text-[#ffff]">©Todos los derechos reservados. Hecho con 💙 en colaboración con Penguin Academy
       </p>
       <div class="flex flex-row justify-end mx-[20px]">
         <img class="w-[50px] h-[50px]" src=static/logoAPI.png alt="Logo APIPP">
-        <h1 class="my-[5px]  mx-[10px] text-[25px] font-[Poppins] bg-opacity-0 text-[#0F2B66]"> APIPP </h1>
+        <h1 class="my-[5px]  mx-[10px] text-[25px] font-[Poppins] bg-opacity-0 text-[#ffff]"> APIPP </h1>
       </div>
     </div>
     </div>
