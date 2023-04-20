@@ -1,63 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APIPP</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-    </style>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@100&display=swap');
-        </style>
-        <link rel="icon" href="logoAPI.png">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APIPP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+  </style>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@100&display=swap");
+  </style>
+  <link rel="icon" href="{{ url_for('static', filename='logoAPI.png') }}" />
 </head>
-<body>
-    <header>
-        <!--logo-nombre-->
-        <div class="flex justify-between align-align-middle h-[90px] bg-white" style="align-items: center;">
-            <div class="flex flex-row justify-start ">
-                <!--logo-->
-            <img src="logoAPI.png" alt="logo APIPP" class="mt-[5px] w-[120px] h-[120px]">
-                 <!--nombre-->
-            <a href="index_a.html" class="my-[5px]  mx-[10px] text-[80px] font-[Poppins] bg-opacity-0 text-[#0F2B66]">APIPP</a>
+
+<body class="bg-cyan-[10] bg-cover">
+  <header>
+    <div class="flex justify-between align-align-middle h-[90px] bg-white" style="align-items: center">
+      <div class="flex flex-row justify-start">
+        <img src="{{ url_for('static', filename='logoAPI.png') }}" alt="logo APIPP"
+          class="mt-[5px] w-[120px] h-[120px]" />
+        <a href="/"
+          class="my-[5px] mx-[10px] text-[80px] font-[Poppins] bg-opacity-0 text-[#0F2B66]">APIPP</a>
+      </div>
+      <nav class="bg-[#2E4066]">
+        <div class="container px-6 py-[10px] w-[74vw]">
+          <div
+            class="absolute inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-100 ease-in-out dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between">
+            <div class="flex flex-row justify-end text-white capitalize w-[80vw] font-[Roboto]">
+              <a href="/docs"
+                class="mt-2 transition-colors transform lg:mt-0 lg:mx-4 font-[Roboto] hover:text-white dark:hover:text-gray-200">DOCUMENTACION</a>
             </div>
-             <!--seccion navbar-->
-            <nav class="bg-[#2E4066] ">
-                <div class="container px-6 py-[10px] w-[74vw]">
-                        <div class="absolute inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-100 ease-in-out 
-                        dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between">
-                            <div class="flex flex-row justify-end text-white capitalize w-[80vw] font-[Roboto]">
-                                <a href="#" class="mt-2 transition-colors transform lg:mt-0 lg:mx-4 hover:text-white dark:hover:text-gray-200">ACERCA DE APIPP</a>
-                                <a href="/docs" class="mt-2 transition-colors transform lg:mt-0 lg:mx-4 font-[Roboto] hover:text-white dark:hover:text-gray-200">DOCUMENTACION</a>
-                            </div>
-                        </div>
-                </div>
-            </nav>
+          </div>
         </div>
-    </header>
-   
-   
-    <main>
-         <!--seccion quienes somos-->
-        <div class="flex align-center justify-center mx-[10px]">
-            <h1 class="text-[#0F2B66] text-[60px] font-[Poppins]">QUIENES SOMOS</h1>
-        </div>
-        <!--seccion documentacion-->
-        <div class="flex align-center justify-center mx-[10px]">
-            <h1 class="text-[#0F2B66] text-[60px] font-[Poppins]">DOCUMENTACION</h1>
-            <div>
+      </nav>
+    </div>
+  </header>
 
-            </div>
-        </div>
+  <main class="flex flex-row-reverse justify-between">
+    <div class="flex flex-col align-end mx-[40px]">
+      <h1 class="text-[#0F2B66] text-[50px] font-[Poppins] flex justify-center" style="color: #2E4066;
+        text-shadow:
+         -1px -1px 0 #2E4066, 
+          1px -1px 0 #2E4066,
+          -1px 1px 0 #2E4066,
+           1px 1px 0 #2E4066;">QUIENES SOMOS</h1>
+      <p class="my-[5px]">APIPP por sus siglas (interfaz de programación de aplicaciones de Penitenciarias Paraguayas)
+        es una solución a la falta de centralización y digitalización de los datos del sistema penitenciario.</p>
+      <h2 class="text-[#0F2B66] text-[50px] font-[Poppins] flex justify-center" style="color: #2E4066;
+           text-shadow:
+            -1px -1px 0 #2E4066, 
+             1px -1px 0 #2E4066,
+             -1px 1px 0 #2E4066,
+              1px 1px 0 #2E4066;">MISION</h2>
+      <p class="my-[5px]">Buscamos disponibilizar la información del sistema penitenciario de una forma ágil para
+        optimizar los tiempos de las partes beneficiadas y de esa manera contribuir a una correcta gestión de los
+        procesos para las personas privadas de libertad. </p>
+      <h2 class="text-[#0F2B66] text-[50px] font-[Poppins] flex justify-center" style="color: #2E4066;
+           text-shadow:
+            -1px -1px 0 #2E4066, 
+             1px -1px 0 #2E4066,
+             -1px 1px 0 #2E4066,
+              1px 1px 0 #2E4066;">VISION</h2>
+      <p class="my-[5px]">Con esta solución queremos estandarizar la información de inclusividad a diferentes entidades
+        para una correcta gestión que beneficie tanto a el personal penitenciario como a las personas privadas de su
+        libertad y también apuntamos a la digitalización y actualización constante de datos.</p>
+    </div>
+    <div class="container mx-auto flex flex-col items-start justify-start h-screen">
+      <div class="bg-indigo-900 rounded-lg p-6 shadow-lg" id="contenedor">
+        <h2 class="font-bold text-white text-3xl"><span>Penitenciaria: <span
+              class="font-normal">{{prisiones.penitenciarias[0].nombre}}</span></h2>
+        <h2 class="font-bold text-white text-3xl"><span>Ubicacion:<span class="font-normal">{{prisiones.penitenciarias[0].direccion}} - {{prisiones.penitenciarias[0].ciudad}}</span></h2>
+        <h2 class="font-bold text-white text-3xl mb-4"><span>capacidad:<span class="font-normal"> {{prisiones.penitenciarias[0].capacidad}} personas.</span>
+        </h2>
+        <img class="mx-auto rounded-lg shadow-lg mb-4" src="{{prisiones.penitenciarias[0].foto }}" alt="" width="400">
+      </div>
+    </div>
 
-    </main>
+  </main>
 
-    <footer>
-        
-    </footer>
-
+  <footer class="bg-[#ffff] mt-[50px]">
+    <div class="flex flex-col items-center sm:flex-row sm:justify-between mx-[20px]">
+      <p class="text-sm text-[#0F2B66]">©Todos los derechos reservados. Hecho con 💙 en colaboración con Penguin Academy
+      </p>
+      <div class="flex flex-row justify-end mx-[20px]">
+        <img class="w-[50px] h-[50px]" src=static/logoAPI.png alt="Logo APIPP">
+        <h1 class="my-[5px]  mx-[10px] text-[25px] font-[Poppins] bg-opacity-0 text-[#0F2B66]"> APIPP </h1>
+      </div>
+    </div>
+    </div>
+  </footer>
 </body>
+
 </html>
