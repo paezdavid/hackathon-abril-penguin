@@ -3,6 +3,17 @@
 ## Descripción del Proyecto: 
 APIPP centraliza datos del sistema penitenciario del Paraguay, promueve la transparencia de la información y hace estos datos de libre acceso al público general. La accesibilidad a estos datos ayudará principalmente a la agilización de sistemas nacionales, a analistas y a investigadores.
 
+Este proyecto fue parte de la hackathon de Penguin Academy de abril 2023.
+
+# Integrantes
+- Florencia Ozuna
+- Bruno Recalde
+- Marcelo Amarilla
+- Franco Rolandi
+- Andrea Amarilla
+
+- **Coaches:** Tamara Cantero y David Páez
+
 ## Inicializar el proyecto
 ```git clone https://github.com/paezdavid/hackathon-abril-penguin.git```
 
