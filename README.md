@@ -50,17 +50,16 @@ Este proyecto fue parte de la hackathon de Penguin Academy de abril 2023.
 
 #### Levantar servidores
 
+- FastAPI (inicializar la API antes del servidor de Flask): 
+```uvicorn main:app --reload```
+
+
+- Ir a: 
+```http://localhost:8000```
+
 - Flask: 
 ```flask --debug run```
 
 
 - Ir a: 
 ```http://localhost:5000```
-
-
-- FastAPI: 
-```uvicorn main:app --reload```
-
-
-- Ir a: 
-```http://localhost:8000```
